@@ -37,10 +37,6 @@ function App() {
   
 
   const addTodo=(Todo)=>{
-    // const Todo = {
-    //   title: title,
-    //   desc: desc,
-    // }
     setTodos([...todos, Todo]);
   }
 
@@ -50,12 +46,13 @@ function App() {
     }));
   }
 
-  // const Complete=(Todo)=>{
-  //   setTodos(todos.filter((e) => {
-  //       {e === Todo? e.done=1:""}
-  //   }));
-  // }
-  
+  const Complete=(Todo)=>{
+    (Todo.done)?Todo.done=0:Todo.done=1;
+    setTodos(todos.filter((e) => {
+      return true;
+    }));
+  }
+
   return (
     <div className="App">
     <Router>
@@ -73,7 +70,7 @@ function App() {
           return(
             <>
               <Gettodo addTodo={addTodo}/>
-              <Todos  todos={todos} Del={Del}/>
+              <Todos  todos={todos} Complete={Complete} Del={Del}/>
             </>
           )} }>
       </Route>
