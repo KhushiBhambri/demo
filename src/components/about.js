@@ -12,7 +12,7 @@ export const About = () => {
             <h3 className="mt-3 heading">This is a <span>Task Manager Application or  </span>Todo App.</h3>
             <p style={para}> 
                  Dear User,<br/>You are Welcome to This Task Managing Application. It is quite User Friendly.
-                 All you need to do is to Give the Task Title and its description(if Required)and Click the Add Button.
+                 All you need to do is to give the Task Title and its Description(if Required) and Click the Add Button.
                 The task gets Added to the Todo List.
                 <br/>After completion you can click the delete button to clear it from the list or click the done button to mark it as done.
                 The choice completely depends on user.
@@ -21,7 +21,7 @@ export const About = () => {
                 </p>
                 <img src={image} alt=""height="50%" width="70%"/>
             <hr style={{"backgroundColor":'white',width:"90%"}}/>
-            <h3 className="mt-3">Know the Author</h3>
+            <h3 className="mt-3">Know the Creator</h3>
             <p style={para} className="mb-5">
                 I am a Software Developer with profound interest in designing Web Apps.<br/>
                 I believe in the Principle of Learn and Grow.
