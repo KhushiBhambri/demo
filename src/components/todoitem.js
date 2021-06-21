@@ -2,17 +2,26 @@ import React from 'react'
 
 export const Todoitem = ({todo,Del}) => {
     let todostyle={
-        display:"flex"
+        display:"flex",
+        justifyContent:"space-between"
+    }
+    let btndiv={
+        display:"flex",
+        justifyContent:"space-around",
+        minWidth:"120px",
+        maxHeight:"32px"
     }
     return (
-        <>
+        <div >
         <div className="inline" style={todostyle}>
-           <h4 className="ml-5">{todo.title}</h4>
-           <button className="btn btn-sm btn-danger" style={{position: "absolute", right: "15vw"}} onClick={()=>{Del(todo)}}>Delete</button> 
+           <div style={{ overflowWrap: "break-word"}}><h5 className="ml-5" >{todo.title}</h5></div>
+           <div style={btndiv}>
+           <button className="btn btn-sm btn-danger" onClick={()=>{Del(todo)}}>X</button> 
+           <button className="btn btn-sm btn-success" onClick={()=>{}}>Done</button>
+           </div>
         </div>
-           <p>{todo.desc}</p>
-           {/* <button className="btn btn-sm btn-success mx-5" onClick={()=>{complete(todo)}}>Done</button> */}
+           <p style={{ overflowWrap: "normal",textAlign:"left",marginLeft:"20px"}}>{todo.desc}</p>
            <hr style={{"backgroundColor":'white',width:"95%"}}/>
-        </>
+        </div>
     )
 }
